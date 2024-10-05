@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import apiClient from '../services/api-client';
 import { AxiosRequestConfig, CanceledError } from 'axios';
@@ -39,6 +38,7 @@ const useData = <T>(
 
       return () => controller.abort();
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     deps ? [...deps] : []
   );
 
