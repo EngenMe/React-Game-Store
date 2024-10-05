@@ -4,8 +4,8 @@ import logo from '../assets/logo.svg';
 
 const NavBar = () => {
   return (
-    <HStack justifyContent="space-between" padding="0 10px 0 0">
-      <Image src={logo} width="60px" />
+    <HStack justifyContent="space-between" padding="10px 30px 10px 10px">
+      <Image src={logo} width="100px" />
       <ColorModeSwitch />
     </HStack>
   );
