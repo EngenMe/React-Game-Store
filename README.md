@@ -1,50 +1,135 @@
-# React + TypeScript + Vite
+# React Game Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+React-Game-Store is a dynamic website built using React, fetching data from an external API (RAWG.io) to display a variety of games. This project showcases modern front-end development techniques, including API integration, state management, and responsive design, offering users a smooth and interactive experience for discovering games.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- Features
+- Code Structure
+- Prerequisites
+- Installation
+- Configuration
+- Running the Application
+- API Endpoints
+- Technologies Used
+- Contributing
+- License
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Game Listing: Fetch and display games from an external API.
+- Search Functionality: Search for games by name or keyword.
+- Platform and Genre Filtering: Filter games based on genre and platform.
+- Responsive Design: Mobile-first responsive layout.
+- Dark Mode Toggle: Switch between light and dark modes.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Code Structure
+
+```bash
++---src
+    |   App.css
+    |   App.tsx
+    |   index.css
+    |   main.tsx
+    |   theme.ts
+    |   vite-env.d.ts
+    |
+    +---assets
+    |       bulls-eye.webp
+    |       logo.svg
+    |       meh.webp
+    |       placeholder.webp
+    |       thumbs-up.webp
+    |
+    +---components
+    |       ColorModeSwitch.tsx
+    |       CriticScore.tsx
+    |       Emoji.tsx
+    |       GameCard.tsx
+    |       GameCardContainer.tsx
+    |       GameCardSkeleton.tsx
+    |       GameGrid.tsx
+    |       GameHeading.tsx
+    |       GenreItemSkeleton.tsx
+    |       GenreList.tsx
+    |       NavBar.tsx
+    |       PlatformIconList.tsx
+    |       PlatformSelector.tsx
+    |       RemoveAGameFromList.tsx
+    |       SearchInput.tsx
+    |       SortSelector.tsx
+    |
+    +---data
+    |       genres.ts
+    |       platforms.ts
+    |
+    +---hooks
+    |       useData.ts
+    |       useGames.ts
+    |       useGenres.ts
+    |       usePlatforms.ts
+    |
+    +---services
+            api-client.ts
+            image-url.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Node.js v14 or higher
+- npm or yarn
+- Vite (if developing locally)
+- An account on RAWG.io
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Installation
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/EngenMe/React-Game-Store.git
+cd React-Game-Store
 ```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or if you use yarn
+yarn install
+```
+
+## Configuration
+
+To access the game data, you'll need to create an account on [rawg.io](https://rawg.io/)
+and obtain an API key.
+
+## Running the Application
+
+- Development Mode
+
+```bash
+npm run dev
+# or if using yarn
+yarn dev
+```
+
+This will start the development server and the app will be available at `http://localhost:{your-port}`
+
+## Technologies Used
+
+- Frontend: React, TypeScript
+- State Management: React Hooks (with custom hooks)
+- Styling: CSS Modules
+- Build Tool: Vite
+- API Integration: RAWG.io API (via custom api-client.ts)
+- Utilities: Immer, Lodash
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests for any improvements or bug fixes. Contributions are always welcome!
+
+## License
+
+This project is licensed under the MIT License - see the **`[LICENSE](LICENSE)`** file for details.
