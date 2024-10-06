@@ -4,6 +4,7 @@ import PlatformIconList from './PlatformIconList';
 import CriticScore from './CriticScore';
 import getCroppedImageUrl from '../services/image-url';
 import RemoveAGameFromList from './RemoveAGameFromList';
+import Emoji from './Emoji';
 
 interface Props {
   game: Game;
@@ -21,6 +22,7 @@ const GameCard = ({ game }: Props) => {
           <CriticScore score={game.metacritic} />
         </HStack>
         <RemoveAGameFromList>{game.name}</RemoveAGameFromList>
+        <Emoji rating={game.rating_top} />
       </CardBody>
     </Card>
   );
