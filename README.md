@@ -4,6 +4,14 @@
 
 React-Game-Store is a dynamic website built using React, fetching data from an external API (RAWG.io) to display a variety of games. This project showcases modern front-end development techniques, including API integration, state management, and responsive design, offering users a smooth and interactive experience for discovering games.
 
+The website is hosted on Vercel and can be accessed via the following link:
+
+**[Live Website](https://main--engenme.netlify.app/)**
+
+<div>
+  <img src="./src/assets/LangPage.jpeg" alt="Performance Score" width="700" height="800" style="display: inline-block;"/>
+</div>
+
 ## Table of Contents
 
 - Features
