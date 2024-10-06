@@ -11,7 +11,7 @@ interface Props {
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data, error, isLoading } = useGenres();
 
-  const skeletons = Array.from({ length: 15 }, (_, index) => index + 1);
+  const skeletons = Array.from(Array(16).keys());
   if (error) return null;
 
   return (
