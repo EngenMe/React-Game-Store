@@ -6,7 +6,7 @@ interface Props {
 
 const RemoveAGameFromList = ({ children }: Props) => {
   return (
-    <Heading fontSize="2xl">
+    <Heading fontSize={{ base: '2xl', sm: 'xl' }}>
       {children.includes('God of') ? 'Not a God' : children}
     </Heading>
   );
