@@ -9,7 +9,7 @@ The website is hosted on Vercel and can be accessed via the following link:
 **[Live Website](https://main--engenme.netlify.app/)**
 
 <div>
-  <img src="./src/assets/LangPage.jpeg" alt="Performance Score" width="700" height="800" style="display: inline-block;"/>
+  <img src="./src/assets/LangPage.jpeg" alt="Performance Score" width="800" height="1200" style="display: inline-block;"/>
 </div>
 
 ## Table of Contents
